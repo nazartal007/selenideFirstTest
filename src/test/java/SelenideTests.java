@@ -1,15 +1,12 @@
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideTests {
 
     @Test
-    public void softAssertPageOnGitHub(){
+    public void softAssertPageOnGitHub() {
         open("https://github.com/selenide/selenide");
         $("[data-content='Wiki']").click();
         $("#wiki-pages-filter").setValue("SoftAssertions");
@@ -18,7 +15,7 @@ public class SelenideTests {
     }
 
     @Test
-    public void dragAndDropTest(){
+    public void dragAndDropTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").should(text("A"));
         $("#column-a").dragAndDropTo($("#column-b"));
